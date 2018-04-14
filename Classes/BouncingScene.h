@@ -14,6 +14,7 @@ public:
     virtual void onTouchMoved(cocos2d::Touch*, cocos2d::Event*);
     virtual void onTouchCancelled(cocos2d::Touch*, cocos2d::Event*);
 	virtual bool onContactBegin(cocos2d::PhysicsContact& contact);
+	virtual void onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event*);
 
 	CREATE_FUNC(BouncingScene);
 private:
@@ -23,5 +24,8 @@ private:
 	float scaleMulti;
 	float circleSize;
 	cocos2d::Label *score_label;
+	bool sound;
+	bool debug;
+	bool overlay;
 };
 
